@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% if full_name %}
+        <p>Здраствуйте, {{full_name}}! Ваш логин: {{login}}. Ваш пароль: {{password}}.</p>
+        {%else%}
+        <p>Пользователь отсутствует в базе данных!</p>
+        {% endif %}
+
+	</form>
+</body>
+</html>
+

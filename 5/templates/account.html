@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% if full_name %}
+        <p>Здраствуйте, {{full_name}}! Ваш логин: {{login}}. Ваш пароль: {{password}}.</p>
+        {%else%}
+        <p>Пользователь отсутствует в базе данных!</p>
+        {% endif %}
+    </form>
+    <br>
+    <form action="{{ url_for('register') }}" method="get">
+        <a href="{{ url_for('login') }}">На главную страницу</a>
+    </form>
+</body>
+</html>
+
